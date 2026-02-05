@@ -15,13 +15,13 @@ const PageContainer = ({ children, className = "" }) => {
       animate={{ opacity: 1 }}
       exit={{ opacity: shouldReduceMotion ? 1 : 0 }}
       transition={{ duration: shouldReduceMotion ? 0 : 0.15, ease: "easeOut" }}
-      className="min-h-screen w-full bg-valentine-bg flex flex-col"
+      className="min-h-[100dvh] w-full bg-valentine-bg flex flex-col overflow-x-hidden"
     >
       <main
         className={`
           flex-1 w-full
           flex flex-col items-center
-          px-6 py-12
+          px-6 py-6 md:py-12
           ${className}
         `}
       >
