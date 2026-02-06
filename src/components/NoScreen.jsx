@@ -37,16 +37,16 @@ const NoScreen = () => {
             rotate: [0, -5, 5, -5, 0],
           }}
           transition={{
-            duration: 0.6,
-            delay: 0.2,
-            rotate: { duration: 0.4, delay: 0.5 },
+            duration: 0.35,
+            delay: 0.1,
+            rotate: { duration: 0.3, delay: 0.25 },
           }}
         />
 
         {/* Sad message */}
         <AnimatedText
           as="p"
-          delay={0.4}
+          delay={0.15}
           className="font-sans text-lg md:text-xl text-valentine-brown"
         >
           You broke my heart :(
@@ -58,7 +58,7 @@ const NoScreen = () => {
         className="flex-1 flex flex-col items-center justify-end pb-16"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, delay: 0.6 }}
+        transition={{ duration: 0.3, delay: 0.3 }}
       >
         <Button onClick={handleTryAgain}>Try again</Button>
       </motion.div>

@@ -61,7 +61,7 @@ const ReminderScreen = () => {
         aria-label="Replay the card"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.3, delay: 0.8 }}
+        transition={{ duration: 0.25, delay: 0.35 }}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
@@ -73,7 +73,7 @@ const ReminderScreen = () => {
         {/* "It's your reminder to" */}
         <AnimatedText
           as="p"
-          delay={0.1}
+          delay={0.05}
           className="font-sans text-base text-valentine-brown/80 text-center leading-relaxed mt-12"
         >
           It's your
@@ -84,7 +84,7 @@ const ReminderScreen = () => {
         {/* "be my" in script font */}
         <AnimatedText
           as="h2"
-          delay={0.2}
+          delay={0.1}
           className="font-script text-5xl md:text-6xl text-valentine-brown mt-6"
         >
           be my
@@ -95,14 +95,14 @@ const ReminderScreen = () => {
           className="flex items-center justify-center gap-2 mt-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
+          transition={{ duration: 0.3, delay: 0.15 }}
         >
           {/* Date 12 - very faded */}
           <motion.div
             className="w-10 h-10 flex items-center justify-center rounded-lg border border-valentine-brown/20"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
+            transition={{ delay: 0.18 }}
           >
             <span className="font-serif text-sm text-valentine-brown/20">
               12
@@ -114,7 +114,7 @@ const ReminderScreen = () => {
             className="w-10 h-10 flex items-center justify-center rounded-lg border border-valentine-brown/40"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.45 }}
+            transition={{ delay: 0.2 }}
           >
             <span className="font-serif text-sm text-valentine-red/60">13</span>
           </motion.div>
@@ -125,8 +125,8 @@ const ReminderScreen = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
-              delay: 0.5,
-              duration: 0.4,
+              delay: 0.22,
+              duration: 0.25,
               ease: [0.34, 1.56, 0.64, 1],
             }}
           >
@@ -146,7 +146,7 @@ const ReminderScreen = () => {
             className="w-10 h-10 flex items-center justify-center rounded-lg border border-valentine-brown/40"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.55 }}
+            transition={{ delay: 0.24 }}
           >
             <span className="font-serif text-sm text-valentine-red/60">15</span>
           </motion.div>
@@ -156,7 +156,7 @@ const ReminderScreen = () => {
             className="w-10 h-10 flex items-center justify-center rounded-lg border border-valentine-brown/20"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
+            transition={{ delay: 0.26 }}
           >
             <span className="font-serif text-sm text-valentine-brown/20">
               16
@@ -167,7 +167,7 @@ const ReminderScreen = () => {
         {/* "Valentine" in script font */}
         <AnimatedText
           as="h2"
-          delay={0.5}
+          delay={0.2}
           className="font-script text-5xl md:text-6xl text-valentine-brown mt-8"
         >
           Valentine
@@ -179,7 +179,7 @@ const ReminderScreen = () => {
         className="flex justify-center pb-8"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, delay: 0.7 }}
+        transition={{ duration: 0.3, delay: 0.3 }}
       >
         <Button onClick={handleSaveTheDate}>
           {copied ? "Message copied!" : "Save the date"}

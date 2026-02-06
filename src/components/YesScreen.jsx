@@ -38,8 +38,8 @@ const YesScreen = () => {
             animate={{ opacity: 1, x: 0, rotate: 0 }}
             exit={{ opacity: 0, x: -50 }}
             transition={{
-              duration: 0.6,
-              delay: 0.2,
+              duration: 0.5,
+              delay: 0.05,
               ease: [0.34, 1.56, 0.64, 1], // spring-like
             }}
           />
@@ -53,8 +53,8 @@ const YesScreen = () => {
             animate={{ opacity: 1, x: 0, rotate: 0 }}
             exit={{ opacity: 0, x: 50 }}
             transition={{
-              duration: 0.6,
-              delay: 0.3,
+              duration: 0.5,
+              delay: 0.12,
               ease: [0.34, 1.56, 0.64, 1], // spring-like
             }}
           />
@@ -67,14 +67,14 @@ const YesScreen = () => {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 10 }}
           transition={{
-            duration: 0.5,
-            delay: 0.5,
+            duration: 0.3,
+            delay: 0.15,
             ease: "easeOut",
           }}
         >
           <AnimatedText
             as="span"
-            delay={0.6}
+            delay={0.2}
             className="font-serif text-2xl md:text-3xl text-valentine-brown"
           >
             I love you!
@@ -87,8 +87,8 @@ const YesScreen = () => {
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
-              duration: 0.4,
-              delay: 0.8,
+              duration: 0.25,
+              delay: 0.25,
               ease: [0.34, 1.56, 0.64, 1],
             }}
           />
@@ -100,7 +100,7 @@ const YesScreen = () => {
         className="flex-1 flex flex-col items-center justify-end pb-16"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, delay: 0.9 }}
+        transition={{ duration: 0.3, delay: 0.3 }}
       >
         <Button onClick={handleContinue}>Continue</Button>
       </motion.div>

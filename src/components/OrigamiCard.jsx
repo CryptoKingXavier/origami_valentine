@@ -1,8 +1,8 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 // Import origami state images
-import folded from '../assets/origmai_parts/folded.png'
+import foldedOrigami from '../assets/origmai_parts/folded_origami.svg'
 import oneUnfolded from '../assets/origmai_parts/one_unfolded.png'
 import twoUnfolded from '../assets/origmai_parts/two_unfolded.png'
 import threeUnfolded from '../assets/origmai_parts/three_unfolded.png'
@@ -15,7 +15,7 @@ const STATES = ['folded', 'one', 'two', 'three', 'four', 'opened']
 
 // Map states to images
 const STATE_IMAGES = {
-  folded,
+  folded: foldedOrigami,
   one: oneUnfolded,
   two: twoUnfolded,
   three: threeUnfolded,
@@ -86,7 +86,24 @@ const OrigamiCard = ({ searchParams }) => {
     }
   }, [currentState, isAnimating, stateIndex, reducedMotion])
 
-  const handleInteraction = useCallback((e) => {
+  const handleOpenedClick = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect()
+    const x = e.clientX - rect.left
+    const y = e.clientY - rect.top
+    const width = rect.width
+    const height = rect.height
+
+    const relX = x / width
+    const relY = y / height
+
+    if (relX < 0.35 && relY < 0.35) {
+      navigate(`/yes?${searchParams.toString()}`)
+    } else if (relX > 0.65 && relY > 0.65) {
+      navigate(`/no?${searchParams.toString()}`)
+    }
+  }
+
+  const handleInteraction = (e) => {
     if (isAnimating) return
 
     if (showClickHint) setShowClickHint(false)
@@ -122,23 +139,6 @@ const OrigamiCard = ({ searchParams }) => {
     // Handle opened state clicks
     if (currentState === 'opened' && e.clientX !== undefined) {
       handleOpenedClick(e)
-    }
-  }, [currentState, isAnimating, showClickHint, reducedMotion])
-
-  const handleOpenedClick = (e) => {
-    const rect = e.currentTarget.getBoundingClientRect()
-    const x = e.clientX - rect.left
-    const y = e.clientY - rect.top
-    const width = rect.width
-    const height = rect.height
-
-    const relX = x / width
-    const relY = y / height
-
-    if (relX < 0.35 && relY < 0.35) {
-      navigate(`/yes?${searchParams.toString()}`)
-    } else if (relX > 0.65 && relY > 0.65) {
-      navigate(`/no?${searchParams.toString()}`)
     }
   }
 
