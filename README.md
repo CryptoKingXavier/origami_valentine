@@ -144,4 +144,4 @@ The design elements are adapted from work licensed under [CC BY 4.0](https://cre
 
 ## 💝 Made with Love
 
-Created for Valentine's Day 2026 by [Koli Oyama](https://linktr.ee/kolioyama). Spread the love! 💕
+Created for Valentine's Day 2026 by [CryptoKingXavier](https://github.com/CryptoKingXavier). Spread the love! 💕
