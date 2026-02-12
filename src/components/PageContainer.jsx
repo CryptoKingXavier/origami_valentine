@@ -39,7 +39,7 @@ const PageContainer = ({ children, className = "" }) => {
             rel="noopener noreferrer"
             className="text-valentine-brown/80 hover:text-valentine-brown transition-colors"
           >
-            Koli Oyama
+            CryptoKingXavier
           </a>
         </p>
       </footer>
